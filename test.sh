@@ -29,6 +29,7 @@ CREATE_EVENTS=$(grep created _output | wc -l)
 CLOSE_EVENTS=$(grep closed _output | wc -l)
 
 rm _output
+./cleanup.sh
 
 echo
 if [[ $CREATE_EVENTS -ne 3 ]] || [[ $CLOSE_EVENTS -ne 3 ]]; then
